@@ -414,6 +414,36 @@ public class BarcodeReadException : System.Exception
 
 ***Why: consistent with the Microsoft's .NET Framework and easy to read.***
 
+#### 26. Do use underscore just for event handlers method names
+
+```csharp 
+// Correct
+public DeleteRow_Click()
+{
+}
+```
+
+```Silverlight 
+// Correct
+<Button Name="IsDeleted" 
+        Height="25" Width="70" 
+        Content="Delete" 
+        HorizontalAlignment="Center" 
+        Click="DeleteRow_Click" />
+```
+
+#### 27. Do use a correct justify for longer line of code in silverlight 
+
+```Silverlight 
+// Correct
+<sdk:AutoCompleteBox x:Name="Provider"
+                     ItemsSource="{Binding ProviderList}"
+                     FilterMode="Contains"
+                     MinimumPrefixLength="0"
+                     ValueMemberPath="Provider"
+                     SelectedItem="{Binding SelectedProviderItem, Mode=TwoWay}"
+                     GotFocus="Provider_GotFocus" />
+```
 ## Offical Reference
 
 1. [MSDN General Naming Conventions](http://msdn.microsoft.com/en-us/library/ms229045(v=vs.110).aspx)
